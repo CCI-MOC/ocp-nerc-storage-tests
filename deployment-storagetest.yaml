@@ -5,19 +5,21 @@ metadata:
 spec:
   strategy:
     type: Recreate
-  containers:
-    - image: fio:latest
-      name: storage-tester
-      imagePullPolicy: IfNotPresent
-      volumeMounts:
+  template:
+    spec:
+      containers:
+        - image: fio:latest
+          name: storage-tester
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: pvc-test-nese-hdd
+              mountPath: /mounts/nese-hdd
+            - name: pvc-test-nese-ssd
+              mountPath: /mounts/nese-ssd
+      volumes:
         - name: pvc-test-nese-hdd
-          mountPath: /mounts/nese-hdd
+          persistentVolumeClaim:
+            claimName: pvc-test-nese-hdd
         - name: pvc-test-nese-ssd
-          mountPath: /mounts/nese-ssd
-  volumes:
-    - name: pvc-test-nese-hdd
-      persistentVolumeClaim:
-        claimName: pvc-test-nese-hdd
-    - name: pvc-test-nese-ssd
-      persistentVolumeClaim:
-        claimName: pvc-test-nese-ssd
+          persistentVolumeClaim:
+            claimName: pvc-test-nese-ssd
