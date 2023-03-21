@@ -1,4 +1,4 @@
-FROM centos:stream9
+FROM quay.io/centos/centos:stream9
 
 RUN mkdir /storage-tests
 COPY ./tests.sh /storage-tests/tests.sh
