@@ -3,7 +3,7 @@ FROM quay.io/centos/centos:stream9
 RUN mkdir /storage-tests
 COPY ./tests.sh /storage-tests/tests.sh
 
-RUN yum update && yum install fio
+RUN yum -y update && yum -y install fio
 
 WORKDIR /storage-test
 CMD ./tests.sh
