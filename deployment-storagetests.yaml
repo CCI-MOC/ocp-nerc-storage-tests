@@ -8,7 +8,7 @@ spec:
   template:
     spec:
       containers:
-        - image: fio:latest
+        - image: storagetests:latest
           name: storage-tester
           imagePullPolicy: IfNotPresent
           volumeMounts:

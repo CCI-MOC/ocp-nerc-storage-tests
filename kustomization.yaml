@@ -3,6 +3,8 @@ kind: Kustomization
 commonLabels:
   app: storage-tester
 resources:
-- deployment-storagetest.yaml
+- bc-storagetests.yaml
+- is-storagetests.yaml
 - pvc-hdd.yaml
 - pvc-ssd.yaml
+- deployment-storagetest.yaml

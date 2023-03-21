@@ -3,7 +3,7 @@ FROM centos:stream9
 RUN mkdir /storage-tests
 COPY ./tests.sh /storage-tests/tests.sh
 
-RUN yum install fio
+RUN yum update && yum install fio
 
 WORKDIR /storage-test
 CMD ./tests.sh

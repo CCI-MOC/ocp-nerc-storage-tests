@@ -1,0 +1,9 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  labels:
+    app: storagetests
+  name: storagetests
+spec:
+  lookupPolicy:
+    local: true
