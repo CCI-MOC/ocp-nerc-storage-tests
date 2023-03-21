@@ -8,7 +8,7 @@ spec:
     type: Git
     git:
       uri: https://github.com/CCI-MOC/ocp-nerc-storage-tests.git
-    contextDir: /
+    contextDir: /build/
   strategy:
     type: Docker
     dockerStrategy:
