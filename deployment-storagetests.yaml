@@ -10,7 +10,7 @@ spec:
       containers:
         - image: storagetests:latest
           name: storage-tester
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           volumeMounts:
             - name: pvc-test-nese-hdd
               mountPath: /mounts/nese-hdd

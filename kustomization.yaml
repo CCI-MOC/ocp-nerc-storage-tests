@@ -5,4 +5,4 @@ commonLabels:
 resources:
 - pvc-hdd.yaml
 - pvc-ssd.yaml
-- deployment-storagetest.yaml
+- deployment-storagetests.yaml
