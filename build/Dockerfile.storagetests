@@ -5,5 +5,5 @@ COPY ./tests.sh /storage-tests/tests.sh
 
 RUN yum -y update && yum -y install fio
 
-WORKDIR /storage-test
+WORKDIR /storage-tests
 CMD ./tests.sh
